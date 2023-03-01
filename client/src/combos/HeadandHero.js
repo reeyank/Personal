@@ -7,7 +7,7 @@ const HeadandHero = () => {
   return (
     <>
     <div style={{ 
-    backgroundImage: `url("http://localhost:3000/img/bg-img.png")`
+    backgroundImage: `url("https://unrivaled-zuccutto-591810.netlify.app/img/bg-img.png")`
   }} className="bg-no-repeat bg-cover relative">
         <Heading />
         <Hero />
