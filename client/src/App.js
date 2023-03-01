@@ -22,7 +22,6 @@ const App = () => {
       <Route path="/" element={<HeadandHero />}/>
       <Route path="/" element={<>
         <HeadandHero />
-    <Login />
       </>}/>
     </Routes>
    </div>
