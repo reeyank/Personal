@@ -22,10 +22,8 @@ const App = () => {
       <Route path="/" element={<HeadandHero />}/>
       <Route path="/login" element={
         <>
-          <div className="snap-y snap-mandatory">
-            <HeadandHero />
-            <Login />
-          </div>
+          <HeadandHero />
+          <Login />
         </>
       }/>
     </Routes>
