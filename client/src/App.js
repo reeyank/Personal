@@ -20,10 +20,12 @@ const App = () => {
 
     <Routes>
       <Route path="/" element={<HeadandHero />}/>
-      <Route path="/" element={<>
-        <HeadandHero />
-      </>}/>
-      <Route path="/lo" element={<Hero />}/>
+      <Route path="/login" element={
+        <>
+          <HeadandHero />
+          <Login />
+        </>
+      }/>
     </Routes>
    </div>
  );
