@@ -23,6 +23,7 @@ const App = () => {
       <Route path="/" element={<>
         <HeadandHero />
       </>}/>
+      <Route path="/lo" element={<Hero />}/>
     </Routes>
    </div>
  );
