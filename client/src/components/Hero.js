@@ -12,7 +12,7 @@ const Hero = () => {
       </Helmet>
       <div className="hero min-h-screen">
         <div className="hero-content text-center text-white">
-          <div className="max-w-md mockup-code bg-slate-600 text-white animate-bounce hover:animate-none">
+          <div className="max-w-md mockup-code bg-slate-600 text-white">
             <h1 className="text-6xl poppins">Reeyan Khimani</h1>
             <p className="py-6 text-2xl font-semibold poppins">Hey! Welcome to my Portfolio Website!</p>
             <a className="btn btn-accent text-white" href="/login#sign">Get Started</a>

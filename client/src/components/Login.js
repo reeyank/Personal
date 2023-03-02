@@ -1,7 +1,6 @@
 import {React, useState} from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
 import "../index.css";
-import Hero from "./Hero";
 
 
 // Import the functions you need from the SDKs you need
@@ -49,7 +48,7 @@ const Login = () => {
   return (
     <>
     <div id="sign" className="w-full py-32 relative bg-cover bg-no-repeat">
-        <h1 className="text-secondary text-4xl font-bold flex justify-center poppins">Sign In</h1>
+        <h1 className="text-secondary text-4xl font-bold flex justify-center poppins">Sign Up</h1>
         <div className="flex justify-center p-3">
             <div className="form-control w-full max-w-xs">
                 <label className="label">

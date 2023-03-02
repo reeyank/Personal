@@ -10,6 +10,7 @@ import Heading from "./components/Heading";
 import Hero from "./components/Hero";
 import Login from "./components/Login";
 import HeadandHero from "./combos/HeadandHero";
+import Dashboard from "./components/Dashboard";
  
 const App = () => {
  return (
@@ -19,7 +20,8 @@ const App = () => {
     </Helmet>
 
     <Routes>
-      <Route path="/" element={<HeadandHero />}/>
+      <Route path="/" element={<><HeadandHero />
+        <Dashboard /></>}/>
       <Route path="/login" element={
         <>
           <HeadandHero />
