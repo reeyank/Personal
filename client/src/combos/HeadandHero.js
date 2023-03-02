@@ -8,7 +8,7 @@ const HeadandHero = () => {
     <>
     <div style={{ 
     backgroundImage: `url("https://unrivaled-zuccutto-591810.netlify.app/img/bg-img.png")`
-  }} className="bg-no-repeat bg-cover relative">
+  }} className="bg-no-repeat bg-cover relative min-h-screen">
         <Heading />
         <Hero />
 

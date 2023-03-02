@@ -10,7 +10,7 @@ const Hero = () => {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>  
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet"/>
       </Helmet>
-      <div className="hero min-h-screen">
+      <div className="hero">
         <div className="hero-content text-center text-white">
           <div className="max-w-md mockup-code bg-slate-600 text-white">
             <h1 className="text-6xl poppins">Reeyan Khimani</h1>
