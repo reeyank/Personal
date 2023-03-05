@@ -28,7 +28,8 @@ const Login = () => {
     const navigate = useNavigate();
 
     function signUp(email, password) {
-        createUserWithEmailAndPassword(auth, email, password)
+        if (password.includes("!") || password.includes("?")) {
+            createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
@@ -40,11 +41,36 @@ const Login = () => {
             const errorMessage = error.message;
             navigate('/error');
             });
+        }
+        else {
+            navigate('/point')
+        }
     }
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
+
+function PasswordInput() {
+    const input = (
+        <>
+        <label className="label">
+         <span className="label-text">What is your password?</span>
+        </label>
+        <input type="text" placeholder="Password" className="input input-bordered border-red-600 border-2 w-full max-w-xs" onChange={(e) => setPassword(e.target.value)}/>
+        <label className="label">
+         <span className="label-text text-red-200">Your Password needs a Special Character! (!/?)</span>
+        </label>
+        </>
+    );
+
+    return (
+        <div>
+            {input}
+        </div>
+    )
+}
+
   return (
     <>
     <div id="sign" className="w-full py-32 relative bg-cover bg-no-repeat">
@@ -56,10 +82,7 @@ const Login = () => {
                 </label>
                 <input type="text" placeholder="Email Address" className="input input-bordered w-full max-w-xs" onChange={(e) => setEmail(e.target.value)}/>
                 
-                <label className="label">
-                    <span className="label-text">What is your password?</span>
-                </label>
-                <input type="text" placeholder="Password" className="input input-bordered w-full max-w-xs" onChange={(e) => setPassword(e.target.value)}/>
+                <PasswordInput/>
                 
                 <label className="label">
                     <span className="label-text">What is your phone number?</span>
