@@ -1,6 +1,7 @@
-import {React, useState} from "react";
+import {React, useState, useRef} from "react";
 import { NavLink, useNavigate } from 'react-router-dom';
 import "../index.css";
+import Hero from "./Hero";
 
 
 // Import the functions you need from the SDKs you need
@@ -21,14 +22,25 @@ const firebaseConfig = {
   };
 
 
-const Login = () => {
+
+
+const Login = () => { 
+    const [passwordGood, setActive] = useState(false);
+    const PasswordInput = () => {
+        if (!(password.includes("!"))) {
+            setActive(false);
+        }
+        else {
+            setActive(true);
+        }
+    }
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const navigate = useNavigate();
 
     function signUp(email, password) {
-        if (password.includes("!") || password.includes("?")) {
+        if (passwordGood == true) {
             createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
             // Signed in 
@@ -42,34 +54,11 @@ const Login = () => {
             navigate('/error');
             });
         }
-        else {
-            navigate('/point')
-        }
     }
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
-
-function PasswordInput() {
-    const input = (
-        <>
-        <label className="label">
-         <span className="label-text">What is your password?</span>
-        </label>
-        <input type="text" placeholder="Password" className="input input-bordered border-red-600 border-2 w-full max-w-xs" onChange={(e) => setPassword(e.target.value)}/>
-        <label className="label">
-         <span className="label-text text-red-200">Your Password needs a Special Character! (!/?)</span>
-        </label>
-        </>
-    );
-
-    return (
-        <div>
-            {input}
-        </div>
-    )
-}
 
   return (
     <>
@@ -82,7 +71,11 @@ function PasswordInput() {
                 </label>
                 <input type="text" placeholder="Email Address" className="input input-bordered w-full max-w-xs" onChange={(e) => setEmail(e.target.value)}/>
                 
-                <PasswordInput/>
+                <label className="label">
+                <span className="label-text">What is your password?</span>
+                </label>
+                <input type="text" placeholder="Password" className={"input input-bordered border-2 w-full max-w-xs" + (passwordGood ? "" : " border-red-500")} onChange={(e) => setPassword(e.target.value)} onBlur={PasswordInput}/>
+                {passwordGood ? "" : <div className="label text-red-400">You need to have special characters in your password!!</div>}
                 
                 <label className="label">
                     <span className="label-text">What is your phone number?</span>
