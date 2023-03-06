@@ -95,10 +95,12 @@ const Login = () => {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(errorMessage);
         // The email of the user's account used.
         const email = error.customData.email;
         // The AuthCredential type that was used.
         const credential = GithubAuthProvider.credentialFromError(error);
+        navigate('/o');
         // ...
       });
     }
@@ -162,8 +164,8 @@ const Login = () => {
                     </label>
                     <input type="text" placeholder="Password" className={"input input-bordered border-2 w-full max-w-xs"} onChange={(e) => setPassword(e.target.value)}/>
                     <button className="btn mt-5" onClick={() => signInwithEmail(email, password)}>Sign In</button>
-                    <button className="btn mt-5" onClick={() => signInwithGoogle()}>Continue with Google</button>
-                    <button className="btn mt-5" onClick={() => signInwithGithub()}>Continue with Github</button>
+                    <button className="btn mt-5 bg-indigo-400 text-white border-indigo-400 hover:text-black" onClick={() => signInwithGoogle()}>Continue with Google</button>
+                    <button className="btn mt-5 bg-indigo-400 text-white border-indigo-400 hover:text-black" onClick={() => signInwithGithub()}>Continue with Github</button>
                 </div>
             </div>
         </div>
