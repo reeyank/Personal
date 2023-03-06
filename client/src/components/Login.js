@@ -88,6 +88,7 @@ const Login = () => {
     
         // The signed-in user info.
         const user = result.user;
+        navigate('/p');
         // IdP data available using getAdditionalUserInfo(result)
         // ...
       }).catch((error) => {
