@@ -51,7 +51,7 @@ const Heading = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-accent text-white" href="/login#sign">Get started</a>
+        <a className="btn btn-accent text-white" href="/login#signUp">Get started</a>
       </div>
     </div>
     </>
