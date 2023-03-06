@@ -21,8 +21,6 @@ const firebaseConfig = {
     measurementId: "G-LMVFSL7J2P"
   };
 
-  const provider = new GoogleAuthProvider();
-  const provider2 = new GithubAuthProvider();
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
@@ -30,6 +28,8 @@ const firebaseConfig = {
 
 const Login = () => { 
     const [passwordGood, setActive] = useState(false);
+    const provider = new GoogleAuthProvider();
+    const provider2 = new GithubAuthProvider();
     const PasswordInput = () => {
         if (!(password.includes("!"))) {
             setActive(false);
