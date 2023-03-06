@@ -154,7 +154,7 @@ const Login = () => {
                         <button className="btn mt-5" onClick={() => signUp(email, password)}>HOla</button>
                     </div>
                 </div>
-            </div>ç
+            </div>
             <div id="signIn" className="w-full pt-32 relative bg-cover bg-no-repeat">
                 <h1 className="text-secondary text-4xl font-bold flex justify-center poppins">Sign In</h1>
                 <div className="flex justify-center p-3">
