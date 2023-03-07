@@ -12,7 +12,7 @@ const Hero = () => {
       </Helmet>
       <div className="hero mt-24">
         <div className="hero-content text-center text-white">
-          <div className="max-w-md mockup-code bg-slate-600 text-white">
+          <div className="max-w-md mockup-code bg-gray-800 text-white">
             <h1 className="text-6xl poppins">Reeyan Khimani</h1>
             <p className="py-6 text-2xl font-semibold poppins">Hey! Welcome to my Portfolio Website!</p>
             <a className="btn btn-accent text-white" href="/login#signUp">Get Started</a>
