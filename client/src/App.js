@@ -6,11 +6,13 @@ import { Helmet } from "react-helmet";
 import { Route, Routes } from "react-router-dom";
  
 // We import all the components we need in our app
-import Heading from "./components/Heading";
-import Hero from "./components/Hero";
-import Login from "./components/Login";
+import Heading from "./combos/Heading";
+import Hero from "./combos/Hero";
+import Login from "./combos/Login";
 import HeadandHero from "./combos/HeadandHero";
-import Dashboard from "./components/Dashboard";
+import RtlLayout from "layouts/rtl";
+import AdminLayout from "layouts/admin";
+import AuthLayout from "layouts/auth";
  
 const App = () => {
  return (
@@ -20,14 +22,16 @@ const App = () => {
     </Helmet>
 
     <Routes>
-      <Route path="/" element={<><HeadandHero />
-        <Dashboard /></>}/>
+      <Route path="/" element={<><HeadandHero /></>}/>
       <Route path="/login" element={
         <>
           <HeadandHero />
           <Login />
         </>
       }/>
+      <Route path="auth/*" element={<AuthLayout />} />
+      <Route path="admin/*" element={<AdminLayout />} />
+      <Route path="rtl/*" element={<RtlLayout />} />
     </Routes>
    </div>
  );
