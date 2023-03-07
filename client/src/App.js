@@ -18,7 +18,7 @@ const App = () => {
  return (
   <div>
     <Helmet>
-      <title>Reeyan Khimani's Portfolio Website</title>
+      <title>Reeyan's Portfolio Website</title>
     </Helmet>
 
     <Routes>
