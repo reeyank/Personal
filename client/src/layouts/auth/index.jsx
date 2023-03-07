@@ -4,6 +4,7 @@ import { Link, Routes, Route, Navigate } from "react-router-dom";
 import routes from "routes.js";
 import FixedPlugin from "components/fixedPlugin/FixedPlugin";
 
+
 export default function Auth() {
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
