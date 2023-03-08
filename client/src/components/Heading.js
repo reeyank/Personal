@@ -9,7 +9,7 @@ const Heading = () => {
       <script src="https://kit.fontawesome.com/66da2a232b.js" crossorigin="anonymous"></script>
     </Helmet>
 
-    <div className="navbar text-accent font-poppins">
+    <div className="navbar text-accent">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden" href="/">

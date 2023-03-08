@@ -1,6 +1,6 @@
 import React from "react";
-import Heading from "./Heading";
-import Hero from "./Hero";
+import Heading from "../components/Heading";
+import Hero from "../components/Hero";
 import "../index.css";
 
 const HeadandHero = () => {
