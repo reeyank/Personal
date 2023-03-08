@@ -24,6 +24,8 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
+  export const user2 = "";
+
 
 
 const Login = () => { 
@@ -111,6 +113,7 @@ const Login = () => {
             // Signed in 
             const user = userCredential.user;
             navigate('/');
+            return user;
         })
         .catch((error) => {
             const errorCode = error.code;

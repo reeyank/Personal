@@ -16,6 +16,8 @@ import TaskCard from "views/admin/default/components/TaskCard";
 import tableDataCheck from "./variables/tableDataCheck.json";
 import tableDataComplex from "./variables/tableDataComplex.json";
 
+import {name} from "personalData";
+
 const Dashboard = () => {
   return (
     <div>
@@ -24,8 +26,8 @@ const Dashboard = () => {
       <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
         <Widget
           icon={<MdBarChart className="h-7 w-7" />}
-          title={"Earnings"}
-          subtitle={"$340.5"}
+          title={"Name"}
+          subtitle={name}
         />
         <Widget
           icon={<IoDocuments className="h-6 w-6" />}
@@ -36,21 +38,6 @@ const Dashboard = () => {
           icon={<MdBarChart className="h-7 w-7" />}
           title={"Sales"}
           subtitle={"$574.34"}
-        />
-        <Widget
-          icon={<MdDashboard className="h-6 w-6" />}
-          title={"Your Balance"}
-          subtitle={"$1,000"}
-        />
-        <Widget
-          icon={<MdBarChart className="h-7 w-7" />}
-          title={"New Tasks"}
-          subtitle={"145"}
-        />
-        <Widget
-          icon={<IoMdHome className="h-6 w-6" />}
-          title={"Total Projects"}
-          subtitle={"$2433"}
         />
       </div>
 
