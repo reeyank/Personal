@@ -23,7 +23,6 @@ const firebaseConfig = {
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-  export var [nameSign, setName] = useState("Guest");
 
 const Login = () => { 
     const [passwordGood, setActive] = useState(false);
@@ -65,7 +64,6 @@ const Login = () => {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-        setName(toString(user.email));
         navigate('/p');
         // IdP data available using getAdditionalUserInfo(result)
         // ...
