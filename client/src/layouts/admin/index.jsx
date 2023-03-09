@@ -8,7 +8,7 @@ import routes from "routes.js";
 export default function Admin(props) {
   const { ...rest } = props;
   const location = useLocation();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const [currentRoute, setCurrentRoute] = React.useState("Main Dashboard");
 
   React.useEffect(() => {
