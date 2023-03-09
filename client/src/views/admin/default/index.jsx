@@ -25,7 +25,7 @@ const Dashboard = () => {
   const id = "640a0554e9c0100ed68f48f2";
 
   useEffect(() => {
-    fetch("http://localhost:3000/record/" + id)
+    fetch("https://reeyan-personalwebsite.herokuapp.com/record/" + id)
       .then((response) => response.json())
       .then((name) => setData([name]));
   }, []);
