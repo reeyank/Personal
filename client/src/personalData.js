@@ -1,3 +1,1 @@
-import { nameSign } from "combos/Login";
-
-export var name = nameSign;
+export var name = "Reeyan Khimani";

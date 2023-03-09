@@ -1,3 +1,5 @@
+import {React, useState, useEffect} from "react";
+
 import MiniCalendar from "components/calendar/MiniCalendar";
 import WeeklyRevenue from "views/admin/default/components/WeeklyRevenue";
 import TotalSpent from "views/admin/default/components/TotalSpent";
@@ -15,9 +17,19 @@ import DailyTraffic from "views/admin/default/components/DailyTraffic";
 import TaskCard from "views/admin/default/components/TaskCard";
 import tableDataCheck from "./variables/tableDataCheck.json";
 import tableDataComplex from "./variables/tableDataComplex.json";
+import userEvent from "@testing-library/user-event";
 
-const Dashboard = (props) => {
-  const name = props.name;
+const Dashboard = () => {
+  const [name, setData] = useState([]);
+
+  const id = "640a0554e9c0100ed68f48f2";
+
+  useEffect(() => {
+    fetch("http://localhost:3000/record/" + id)
+      .then((response) => response.json())
+      .then((name) => setData([name]));
+  }, []);
+
   return (
     <div>
       {/* Card widget */}
@@ -26,17 +38,32 @@ const Dashboard = (props) => {
         <Widget
           icon={<MdBarChart className="h-7 w-7" />}
           title={"Name"}
-          subtitle={name}
+          subtitle={
+            name.map(item => (
+              <div key={item.id}>
+                <p>{item.name}</p>
+              </div>
+            ))}
         />
         <Widget
           icon={<IoDocuments className="h-6 w-6" />}
           title={"Spend this month"}
-          subtitle={"$642.39"}
+          subtitle={
+            name.map(item => (
+              <div key={item.id}>
+                <p>${item.spent}</p>
+              </div>
+            ))}
         />
         <Widget
           icon={<MdBarChart className="h-7 w-7" />}
           title={"Sales"}
-          subtitle={"$574.34"}
+          subtitle={
+            name.map(item => (
+              <div key={item.id}>
+                <p>${item.sales}</p>
+              </div>
+            ))}
         />
       </div>
 
