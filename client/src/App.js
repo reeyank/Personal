@@ -14,6 +14,7 @@ import RtlLayout from "layouts/rtl";
 import AdminLayout from "layouts/admin";
 import AuthLayout from "layouts/auth";
 import Tech from "components/Tech";
+import Resume from "./combos/Resume";
  
 const App = () => {
  return (
@@ -31,7 +32,7 @@ const App = () => {
           <Tech />
         </>
       }/>
-
+      <Route path="/resume" element={<><Resume /></>}/>
       <Route path="auth/*" element={<AuthLayout />} />
       <Route path="admin/*" element={<AdminLayout />} />
       <Route path="rtl/*" element={<RtlLayout />} />
