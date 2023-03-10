@@ -15,7 +15,8 @@ import AdminLayout from "layouts/admin";
 import AuthLayout from "layouts/auth";
 import Tech from "components/Tech";
 import Resume from "./combos/Resume";
- 
+import Scieng from "combos/Scieng";
+
 const App = () => {
  return (
   <div>
@@ -33,6 +34,7 @@ const App = () => {
         </>
       }/>
       <Route path="/resume" element={<><Resume /></>}/>
+      <Route path="/scieng" element={<Scieng />} />
       <Route path="auth/*" element={<AuthLayout />} />
       <Route path="admin/*" element={<AdminLayout />} />
       <Route path="rtl/*" element={<RtlLayout />} />
