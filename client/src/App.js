@@ -13,6 +13,7 @@ import HeadandHero from "./combos/HeadandHero";
 import RtlLayout from "layouts/rtl";
 import AdminLayout from "layouts/admin";
 import AuthLayout from "layouts/auth";
+import Tech from "components/Tech";
  
 const App = () => {
  return (
@@ -27,6 +28,7 @@ const App = () => {
         <>
           <HeadandHero />
           <Login />
+          <Tech />
         </>
       }/>
 

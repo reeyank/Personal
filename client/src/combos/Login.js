@@ -73,8 +73,6 @@ const Login = () => {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-        const hola = fetch("localhost:3000/record");
-
         // IdP data available using getAdditionalUserInfo(result)
         // ...
       })
