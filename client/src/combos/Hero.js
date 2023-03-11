@@ -15,7 +15,7 @@ const Hero = () => {
           <div className="max-w-md mockup-code bg-gray-800 text-white">
             <h1 className="text-6xl poppins">Reeyan Khimani</h1>
             <p className="py-8 text-2xl font-semibold poppins">Hey! Welcome to my Portfolio Website!</p>
-            <a className="btn btn-accent text-white" href="/login#signUp">Get Started</a>
+            <a className="btn btn-accent text-white" href="https://portfolio.reeyan.me" target="_blank">Get Started</a>
           </div>
         </div>
       </div>

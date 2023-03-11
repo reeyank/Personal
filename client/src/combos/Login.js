@@ -55,7 +55,7 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           sendEmailVerification(user);
-          navigate("/admin");
+          navigate("/admin/default");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -73,7 +73,7 @@ const Login = () => {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-        navigate('/admin')
+        navigate('/admin/default')
         // IdP data available using getAdditionalUserInfo(result)
         // ...
       })
@@ -98,7 +98,7 @@ const Login = () => {
 
         // The signed-in user info.
         const user = result.user;
-        navigate('/admin')
+        navigate('/admin/default')
         // IdP data available using getAdditionalUserInfo(result)
         // ...
       })
@@ -121,7 +121,7 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        navigate('/admin')
+        navigate('/admin/default')
       })
       .catch((error) => {
         const errorCode = error.code;

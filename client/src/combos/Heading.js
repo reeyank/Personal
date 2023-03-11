@@ -30,7 +30,7 @@ const Heading = () => {
             <li><a href="https://linkedin.com/in/reeyank" target="_blank">Linkedin</a></li>
             <li ><a href="https://blog.reeyan.me/" target="_blank">Blog</a></li>
             <li><a href="https://github.com/reeyank/Personal" target="_blank">Github</a></li>
-
+            <li><a href="/resume" target="_blank">Resume</a></li>
           </ul>
         </div>
         <a className="btn btn-ghost normal-case text-xl" href="/">
@@ -53,10 +53,11 @@ const Heading = () => {
           <li ><a href="https://linkedin.com/in/reeyank/" target="_blank">Linkedin</a></li>
           <li ><a href="https://blog.reeyan.me/" target="_blank">Blog</a></li>
           <li><a href="https://github.com/reeyank/Personal" target="_blank">Github</a></li>
+          <li><a href="/resume" target="_blank">Resume</a></li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-accent text-white" href="/login#signUp">Get started</a>
+        <a className="btn btn-accent text-white" href="https://portfolio.reeyan.me" target="_blank">Get started</a>
       </div>
     </div>
     </>
