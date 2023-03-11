@@ -25,6 +25,7 @@ const Heading = () => {
               <ul className="p-2">
                 <li><a href="/scieng">Science Fair</a></li>
                 <li><a href="https://visualizer.reeyan.me">Sort Visualizer</a></li>
+                <li><a href="https://github.com/reeyank/Personal">Github</a></li>
               </ul>
             </li>
             <li><a href="https://linkedin.com/in/reeyank">Linkedin</a></li>
@@ -50,6 +51,7 @@ const Heading = () => {
           </li>
           <li ><a href="https://linkedin.com/in/reeyank/" target="_blank">Linkedin</a></li>
           <li ><a href="https://blog.reeyan.me/" target="_blank">Blog</a></li>
+          <li><a href="https://github.com/reeyank/Personal">Github</a></li>
         </ul>
       </div>
       <div className="navbar-end">
