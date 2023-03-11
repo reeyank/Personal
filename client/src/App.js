@@ -29,7 +29,7 @@ const App = () => {
       <Route path="/login" element={
         <>
           <HeadandHero />
-          <Login />
+          {/* <Login /> */}
           <Tech />
         </>
       }/>
