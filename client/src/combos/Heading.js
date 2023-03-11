@@ -24,11 +24,11 @@ const Heading = () => {
               </a>
               <ul className="p-2">
                 <li><a href="/scieng">Science Fair</a></li>
-                <li><a href="https://visualizer.reeyan.me">Sort Visualizer</a></li>
-                <li><a href="https://github.com/reeyank/Personal">Github</a></li>
+                <li><a href="https://visualizer.reeyan.me" target="_blank">Sort Visualizer</a></li>
+                <li><a href="https://github.com/reeyank/Personal" target="_blank">Github</a></li>
               </ul>
             </li>
-            <li><a href="https://linkedin.com/in/reeyank">Linkedin</a></li>
+            <li><a href="https://linkedin.com/in/reeyank" target="_blank">Linkedin</a></li>
             <li ><a href="https://blog.reeyan.me/" target="_blank">Blog</a></li>
           </ul>
         </div>
@@ -46,12 +46,12 @@ const Heading = () => {
             </a>
             <ul className="p-2">
               <li><a href="/scieng">Science Fair</a></li>
-              <li><a href="https://visualizer.reeyan.me">Sort Visualizer</a></li>
+              <li><a href="https://visualizer.reeyan.me" target="_blank">Sort Visualizer</a></li>
             </ul>
           </li>
           <li ><a href="https://linkedin.com/in/reeyank/" target="_blank">Linkedin</a></li>
           <li ><a href="https://blog.reeyan.me/" target="_blank">Blog</a></li>
-          <li><a href="https://github.com/reeyank/Personal">Github</a></li>
+          <li><a href="https://github.com/reeyank/Personal" target="_blank">Github</a></li>
         </ul>
       </div>
       <div className="navbar-end">
