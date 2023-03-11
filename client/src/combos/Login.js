@@ -55,7 +55,7 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           sendEmailVerification(user);
-          navigate("/home");
+          navigate("/admin");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -73,6 +73,7 @@ const Login = () => {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
+        navigate('/admin')
         // IdP data available using getAdditionalUserInfo(result)
         // ...
       })
@@ -97,7 +98,7 @@ const Login = () => {
 
         // The signed-in user info.
         const user = result.user;
-        navigate("/p");
+        navigate('/admin')
         // IdP data available using getAdditionalUserInfo(result)
         // ...
       })
@@ -110,7 +111,7 @@ const Login = () => {
         const email = error.customData.email;
         // The AuthCredential type that was used.
         const credential = GithubAuthProvider.credentialFromError(error);
-        navigate("/o");
+        navigate('/error')
         // ...
       });
   }
@@ -120,12 +121,12 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        navigate("/");
+        navigate('/admin')
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        navigate("/home");
+        navigate("/error");
       });
   }
 
