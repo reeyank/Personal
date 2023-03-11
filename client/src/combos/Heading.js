@@ -23,13 +23,14 @@ const Heading = () => {
                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
               </a>
               <ul className="p-2">
-                <li><a href="/scieng">Science Fair</a></li>
+                <li><a href="/scieng" className="bg-black">Science Fair</a></li>
                 <li><a href="https://visualizer.reeyan.me" target="_blank">Sort Visualizer</a></li>
-                <li><a href="https://github.com/reeyank/Personal" target="_blank">Github</a></li>
               </ul>
             </li>
             <li><a href="https://linkedin.com/in/reeyank" target="_blank">Linkedin</a></li>
             <li ><a href="https://blog.reeyan.me/" target="_blank">Blog</a></li>
+            <li><a href="https://github.com/reeyank/Personal" target="_blank">Github</a></li>
+
           </ul>
         </div>
         <a className="btn btn-ghost normal-case text-xl" href="/">
