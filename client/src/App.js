@@ -22,6 +22,8 @@ const App = () => {
   <div>
     <Helmet>
       <title>Reeyan's Portfolio Website</title>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9457672118073189"
+     crossorigin="anonymous"></script>
     </Helmet>
 
     <Routes>
